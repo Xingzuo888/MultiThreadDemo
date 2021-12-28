@@ -25,7 +25,7 @@ class ItemAdapter(val context: Context, val list: MutableList<Bean>,val action: 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.name.text = list[position].path
+        holder.binding.name.text = "download ${position+1}"
         holder.binding.download.text = when (list[position].downloadState){
             -1->{"下载"}
             0->{"下载中"}
